@@ -62,11 +62,6 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-
-;; Tamaño de la fuente (un valor de 100 equivale a 10pt)
-;;(set-face-attribute 'default nil :height 95)
-;;(set-face-attribute 'default nil :height 110)
-
 ;; Resaltado linea actual
 '(global-hl-line-mode t nil (hl-line))
 '(hl-line-face (quote highlight))

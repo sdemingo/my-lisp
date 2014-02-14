@@ -20,9 +20,6 @@
 (setq syscmd-python-run-command "python")  ;;de python-config.el
 
 
-;;;(set-face-attribute 'default nil :height 115)
-
-
 (global-set-key (kbd "<f7>")
                 (lambda () (interactive)
 		  (shell)))
