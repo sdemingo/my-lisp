@@ -26,13 +26,34 @@
 
 
 
-;; Colores
+;; Tema
+
+;; Parámetros independientes de los colores: barras, cursor, menus,
+;; etc.
 (setq default-frame-alist
-      '((cursor-color . "white")
+      '(
 	(cursor-type . box)
-	(foreground-color . "white")
-	(background-color . "grey5")
 	))
+
+;; Colores
+(defun set-dark-colors ()
+  (interactive)
+  (set-background-color "grey5")
+  (set-foreground-color "white")
+  (set-cursor-color "white")
+)
+
+(defun set-light-colors ()
+  (interactive)
+  (set-background-color "wheat1")
+  (set-foreground-color "grey5")
+  (set-cursor-color "grey5")
+)
+
+;; Por defecto el tema oscuro
+(set-dark-colors)
+
+
 
 
 ;; Números de línea en la parte izquierda
@@ -170,10 +191,10 @@
 (setq text-scale-mode-step 1.04)
 
 (defvar sub-zoom-ht (list 120 120 110 100 100  90  80
-80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
-20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
-2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
-1))
+			  80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
+			  20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
+			  2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
+			  1))
 
 (defvar sub-zoom-len (safe-length sub-zoom-ht))
 (defvar def-zoom-ht (car sub-zoom-ht))
