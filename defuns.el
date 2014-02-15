@@ -54,7 +54,8 @@
 (set-dark-colors)
 
 
-
+;; Esconde barra de iconos
+(tool-bar-mode -1)
 
 ;; Números de línea en la parte izquierda
 (global-linum-mode t)
