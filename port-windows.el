@@ -24,18 +24,3 @@
                 (lambda () (interactive)
 		  (shell)))
 
-
-(global-set-key (kbd "<f11>")
-                (lambda () (interactive)
-		  (setq op (read-string "Descargar los ficheros de Org-mode de dropbox?[y/n]: "))
-		  (if (string-match op "y")
-		      (shell-command "java -jar /apps/reed/reed.jar /home/pull-org.rsh")
-		    (message "Operación cancelada"))))
-		  
-
-(global-set-key (kbd "<f12>")
-                (lambda () (interactive)
-		  (setq op (read-string "Subir los ficheros de Org-mode a dropbox?[y/n]: "))
-		  (if (string-match op "y")
-		      (shell-command "java -jar /apps/reed/reed.jar /home/push-org.rsh")
-		  (message "Operación cancelada"))))

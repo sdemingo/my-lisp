@@ -35,7 +35,6 @@
 	))
 
 
-
 ;; Números de línea en la parte izquierda
 (global-linum-mode t)
 
@@ -156,23 +155,21 @@
 
 
 
-;; Reescalado de tamaño de fuente
-;;
-;; From http://unix.stackexchange.com/questions/29786/font-size-issues-with-emacs-in-linum-mode/
-;;
-
-(setq text-scale-mode-step 1.04)
+;; Reescalado de tamaño de fuente que evita que los números de línea
+;; de la izquierda se dejen ver cuando se aumenta el tamaño de texto.
+;; Visto en http://unix.stackexchange.com/questions/29786/font-size-issues-with-emacs-in-linum-mode/
 ;;
 ;; List: `Sub-Zoom Font Heights per text-scale-mode-step`  
 ;;   eg.  For a default font-height of 120 just remove the leading `160 150 140 130` 
-
 ;; (defvar sub-zoom-ht (list 160 150 140 130 120 120 110 100 100  90  80
 ;; 80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
 ;; 20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
 ;; 2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
 ;; 1))
 
-(defvar sub-zoom-ht (list 140 130 120 120 110 100 100  90  80
+(setq text-scale-mode-step 1.04)
+
+(defvar sub-zoom-ht (list 120 120 110 100 100  90  80
 80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
 20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
 2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
@@ -221,3 +218,5 @@
 	      (set-face-attribute 'linum nil :height 
 				  (elt sub-zoom-ht (- 0 text-scale)))))))
   )
+
+
