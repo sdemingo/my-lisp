@@ -53,6 +53,11 @@
 ;; Por defecto el tema oscuro
 (set-dark-colors)
 
+;; Altura y tamaño de letra para la barra de modo
+(set-face-attribute 'mode-line nil :height 80)
+
+
+
 
 ;; Esconde barra de iconos
 (tool-bar-mode -1)
