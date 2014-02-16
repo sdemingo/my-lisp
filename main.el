@@ -75,13 +75,13 @@
 ;; Htmlize
 (load "~/.emacs.d/modules/htmlize.el")
 
-;; Fichero de w3m
-(load "~/.emacs.d/my-lisp/w3m-config.el")
-
-
 ;; Fichero de carga para la versión portable y de windows
 (if (eq system-type 'windows-nt)
     (load "~/.emacs.d/my-lisp/port-windows.el"))
+
+;; Fichero de w3m (en pruebas. En Windows falla)
+;; (load "~/.emacs.d/my-lisp/w3m-config.el")
+
 
 
 ;;     Cargo mi PATH aun cuando arranque desde el entorno gráfico
