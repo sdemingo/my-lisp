@@ -33,6 +33,7 @@
 (setq default-frame-alist
       '(
 	(cursor-type . box)
+	(scroll-bar-width . 20)
 	))
 
 ;; Colores
@@ -56,8 +57,8 @@
 ;; Altura y tamaño de letra para la barra de modo
 (set-face-attribute 'mode-line nil :height 80)
 
-
-
+;; No scroll bar
+(scroll-bar-mode -1)
 
 ;; Esconde barra de iconos
 (tool-bar-mode -1)
