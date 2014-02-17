@@ -69,12 +69,12 @@
 
 
 ;; no funciona en entornos anidados
-;; (defun latex-write-environment ()
-;;   "Genera el código de un entorno tras pedirnos el nombre de este"
-;;   (interactive)
-;;   (setq env (read-string "Name of the environment: "))
-;;   (insert (format "\\begin{%s}\n\n\n\\end{%s}\n" env env))
-;;   (search-backward "\n\n"))
+(defun latex-write-environment ()
+  "Genera el código de un entorno tras pedirnos el nombre de este"
+  (interactive)
+  (setq env (read-string "Name of the environment: "))
+  (insert (format "\\begin{%s}\n\n\n\\end{%s}\n" env env))
+  (search-backward "\n\n"))
 
 
 (defun latex-write-slide ()
