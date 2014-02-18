@@ -47,13 +47,13 @@
 ;; Fichero de configuración del autosave
 (load "~/.emacs.d/my-lisp/auto-save.el")
 
-;; Fichero de configuración del autosave
+;; Fichero de configuración de la lista de recientes
 (load "~/.emacs.d/my-lisp/recent-files.el")
 
 ;; Fichero de configuración del autocomplete
 (load "~/.emacs.d/my-lisp/auto-complete-init.el")
 
-;; Fichero de configuración del autocomplete
+;; Búsqueda de info en javadoc
 (load "~/.emacs.d/modules/javadoc-lookup/javadoc-lookup.el")
 
 ;; Módulo lorem-ipsum
