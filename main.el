@@ -12,6 +12,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/modules/go-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/javadoc-lookup")
+(add-to-list 'load-path "~/.emacs.d/modules/emacs-web-server")
+(add-to-list 'load-path "~/.emacs.d/modules/impatient-mode")
 (add-to-list 'load-path "~/.emacs.d/elpa/")
 (add-to-list 'load-path "~/.emacs.d/elpa/jedi-0.1.2")
 (add-to-list 'load-path "~/.emacs.d/elpa/epc-0.1.1")
@@ -75,6 +77,13 @@
 ;; Htmlize
 (load "~/.emacs.d/modules/htmlize.el")
 
+;; Cl-lib
+(load "~/.emacs.d/modules/cl-lib.el")
+
+;; Impatient mode (para verlo en http://localhost:8080/imp/)
+(load "~/.emacs.d/modules/impatient-mode/impatient-mode.el")
+
+
 ;; Fichero de carga para la versión portable y de windows
 (if (eq system-type 'windows-nt)
     (load "~/.emacs.d/my-lisp/port-windows.el"))
@@ -95,8 +104,8 @@
 ;; marmalade. Se necesita instalar package.el de la página oficial de
 ;; marmlade
 
-;(require 'package)
-;(add-to-list 'package-archives 
-;    '("marmalade" .
-;      "http://marmalade-repo.org/packages/"))
-;(package-initialize)
+;; (require 'package)
+;; (add-to-list 'package-archives 
+;;    '("marmalade" .
+;;      "http://marmalade-repo.org/packages/"))
+;; (package-initialize)
