@@ -40,9 +40,9 @@
       `(
 	;; Comandos para casa
 
-	("p" agenda "Agenda Personal"
+	("a" agenda "Agenda Personal"
 	 ((org-agenda-ndays 28)
-	  (org-agenda-filter-preset '("-aula"))
+	  (org-agenda-filter-preset '("-astro" "-aula"))
 	  ))
 	("c" "Tareas personales para casa" tags-todo "personal|code")
 
@@ -52,6 +52,12 @@
 	  (org-agenda-filter-preset '("+aula"))
 	  ))
 	("I" "Tareas del Instituto" tags-todo "ies")
+
+
+	("x" agenda "Efemérides astronómicas"
+	 ((org-agenda-ndays 28)
+	  (org-agenda-filter-preset '("+astro" "-aula"))
+	  ))
 	))
 
 
