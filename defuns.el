@@ -51,11 +51,15 @@
   (set-cursor-color "grey5")
 )
 
+;; Tipo de letra 
+(set-frame-parameter nil 'font "DejaVu Sans Mono-10")
+
 ;; Por defecto el tema oscuro
 (set-dark-colors)
 
 ;; Altura y tamaño de letra para la barra de modo
 (set-face-attribute 'mode-line nil :height 80)
+
 
 ;; No scroll bar
 (scroll-bar-mode -1)
