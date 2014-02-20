@@ -39,7 +39,7 @@
 (load "~/.emacs.d/my-lisp/latex.el")
 
 ;; Fichero de configuración de slime y lisp
-(load "~/.emacs.d/modules/slime-lisp.el")
+;; (load "~/.emacs.d/modules/slime-lisp.el")
 
 ;; Fichero de configuración de ispell
 (load "~/.emacs.d/my-lisp/ispell-config.el")
@@ -78,10 +78,10 @@
 (load "~/.emacs.d/modules/htmlize.el")
 
 ;; Cl-lib
-(load "~/.emacs.d/modules/cl-lib.el")
+;; (load "~/.emacs.d/modules/cl-lib.el")
 
 ;; Impatient mode (para verlo en http://localhost:8080/imp/)
-(load "~/.emacs.d/modules/impatient-mode/impatient-mode.el")
+;; (load "~/.emacs.d/modules/impatient-mode/impatient-mode.el")
 
 
 ;; Fichero de carga para la versión portable y de windows
