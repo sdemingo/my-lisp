@@ -6,9 +6,6 @@
 
 
 (require 'dired-x)
-(setq dired-omit-files "^\\...+$")
-(add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
-
 
 ;; Borrado y copia recursiva
 (setq dired-recursive-deletes 'always)
