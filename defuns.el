@@ -52,7 +52,7 @@
 )
 
 ;; Tipo de letra 
-(set-frame-parameter nil 'font "DejaVu Sans Mono-10")
+(set-frame-parameter nil 'font "DejaVu Sans Mono-13")
 
 ;; Por defecto el tema oscuro
 (set-dark-colors)
