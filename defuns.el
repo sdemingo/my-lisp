@@ -52,7 +52,7 @@
 )
 
 ;; Tipo de letra 
-(set-frame-parameter nil 'font "DejaVu Sans Mono-13")
+(set-frame-font "Consolas")
 
 ;; Por defecto el tema oscuro
 (set-dark-colors)
@@ -201,7 +201,7 @@
 
 (setq text-scale-mode-step 1.04)
 
-(defvar sub-zoom-ht (list 120 120 110 100 100  90  80
+(defvar sub-zoom-ht (list 140 130 120 120 110 100 100  90  80
 			  80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
 			  20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
 			  2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
