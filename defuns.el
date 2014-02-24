@@ -52,7 +52,8 @@
 )
 
 ;; Tipo de letra 
-(set-frame-font "Consolas")
+(set-face-attribute 'default nil :family "Consolas" :height 120)
+
 
 ;; Por defecto el tema oscuro
 (set-dark-colors)
@@ -199,56 +200,56 @@
 ;; 2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
 ;; 1))
 
-(setq text-scale-mode-step 1.04)
+;; (setq text-scale-mode-step 1.04)
 
-(defvar sub-zoom-ht (list 140 130 120 120 110 100 100  90  80
-			  80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
-			  20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
-			  2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
-			  1))
+;; (defvar sub-zoom-ht (list 140 130 120 120 110 100 100  90  80
+;; 			  80  80  80  70  70  60  60  50  50  50  40  40  40  30  20  20  20  20
+;; 			  20  20  10  10  10  10  10  10  10  10  10  10   5   5   5   5   5   2
+;; 			  2   2   2   2   2   2   2   1   1   1   1   1   1   1   1   1   1   1
+;; 			  1))
 
-(defvar sub-zoom-len (safe-length sub-zoom-ht))
-(defvar def-zoom-ht (car sub-zoom-ht))
-(set-face-attribute 'default nil :height def-zoom-ht)
+;; (defvar sub-zoom-len (safe-length sub-zoom-ht))
+;; (defvar def-zoom-ht (car sub-zoom-ht))
+;; (set-face-attribute 'default nil :height def-zoom-ht)
 
-(defun text-scale-adjust-zAp ()
-  (interactive)
-  (text-scale-adjust 0)
-  (set-face-attribute 'linum nil :height def-zoom-ht)
-  )
-(global-set-key [C-kp-multiply] 'text-scale-adjust-zAp)
+;; (defun text-scale-adjust-zAp ()
+;;   (interactive)
+;;   (text-scale-adjust 0)
+;;   (set-face-attribute 'linum nil :height def-zoom-ht)
+;;   )
+;; (global-set-key [C-kp-multiply] 'text-scale-adjust-zAp)
 
-(defun text-scale-decrease-zAp ()
-  (interactive)
-  (if (not (boundp 'text-scale-mode-amount)) ;; first-time init  
-      (setq  text-scale-mode-amount 0))
-  (setq text-scale (round (/ (* 1 text-scale-mode-amount) 
-			     text-scale-mode-step)))
-  (if (> text-scale (- 1 sub-zoom-len))
-      (progn
-	(text-scale-decrease text-scale-mode-step)
-	(if (<= 0 text-scale-mode-amount)
-	    (set-face-attribute 'linum nil :height def-zoom-ht)
-	  (if (> 0 text-scale-mode-amount)
-	      (set-face-attribute 'linum nil :height 
-				  (elt sub-zoom-ht (- 0 text-scale)))))))
-  )
+;; (defun text-scale-decrease-zAp ()
+;;   (interactive)
+;;   (if (not (boundp 'text-scale-mode-amount)) ;; first-time init  
+;;       (setq  text-scale-mode-amount 0))
+;;   (setq text-scale (round (/ (* 1 text-scale-mode-amount) 
+;; 			     text-scale-mode-step)))
+;;   (if (> text-scale (- 1 sub-zoom-len))
+;;       (progn
+;; 	(text-scale-decrease text-scale-mode-step)
+;; 	(if (<= 0 text-scale-mode-amount)
+;; 	    (set-face-attribute 'linum nil :height def-zoom-ht)
+;; 	  (if (> 0 text-scale-mode-amount)
+;; 	      (set-face-attribute 'linum nil :height 
+;; 				  (elt sub-zoom-ht (- 0 text-scale)))))))
+;;   )
 
 
-(defun text-scale-increase-zAp ()
-  (interactive)
-  (if (not (boundp 'text-scale-mode-amount)) ;; first-time init  
-      (setq  text-scale-mode-amount 0))
-  (setq text-scale (round (/ (* 1 text-scale-mode-amount) 
-			     text-scale-mode-step)))
-  (if (< text-scale 85)
-      (progn
-	(text-scale-increase text-scale-mode-step)
-	(if (< (- 0 text-scale-mode-step) text-scale-mode-amount)
-	    (set-face-attribute 'linum nil :height def-zoom-ht)
-	  (if (> 0 text-scale-mode-amount)
-	      (set-face-attribute 'linum nil :height 
-				  (elt sub-zoom-ht (- 0 text-scale)))))))
-  )
+;; (defun text-scale-increase-zAp ()
+;;   (interactive)
+;;   (if (not (boundp 'text-scale-mode-amount)) ;; first-time init  
+;;       (setq  text-scale-mode-amount 0))
+;;   (setq text-scale (round (/ (* 1 text-scale-mode-amount) 
+;; 			     text-scale-mode-step)))
+;;   (if (< text-scale 85)
+;;       (progn
+;; 	(text-scale-increase text-scale-mode-step)
+;; 	(if (< (- 0 text-scale-mode-step) text-scale-mode-amount)
+;; 	    (set-face-attribute 'linum nil :height def-zoom-ht)
+;; 	  (if (> 0 text-scale-mode-amount)
+;; 	      (set-face-attribute 'linum nil :height 
+;; 				  (elt sub-zoom-ht (- 0 text-scale)))))))
+;;   )
 
 
