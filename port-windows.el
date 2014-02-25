@@ -18,6 +18,9 @@
 
 ;(setq exec-path (append (getenv "PATH")))
 
+;; reconfiguro la fuente de letra para Windows
+(set-face-attribute 'default nil :family "Consolas" :height 120)
+
 ;; Reconfiguro las variables de comando de sistema
 (setq syscmd-file-open "explorer")   ;;de defuns.el
 (setq syscmd-python-run-command "python")  ;;de python-config.el

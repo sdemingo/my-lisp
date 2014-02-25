@@ -51,15 +51,12 @@
   (set-cursor-color "grey5")
 )
 
-;; Tipo de letra 
-(set-face-attribute 'default nil :family "Consolas" :height 120)
-
+;; Tipos de letra 
+(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 110)
+(set-face-attribute 'mode-line nil :height 80)  ;; (Solo para la barra de modo)
 
 ;; Por defecto el tema oscuro
 (set-dark-colors)
-
-;; Altura y tamaño de letra para la barra de modo
-(set-face-attribute 'mode-line nil :height 80)
 
 
 ;; No scroll bar
