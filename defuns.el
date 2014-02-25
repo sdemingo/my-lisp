@@ -42,6 +42,7 @@
   (set-background-color "grey5")
   (set-foreground-color "white")
   (set-cursor-color "white")
+  (set-face-attribute 'default nil :weight 'normal :height 110)
 )
 
 (defun set-light-colors ()
@@ -49,10 +50,11 @@
   (set-background-color "wheat1")
   (set-foreground-color "grey5")
   (set-cursor-color "grey5")
+  (set-face-attribute 'default nil :weight 'bold :height 140)
 )
 
 ;; Tipos de letra 
-(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 110)
+(set-face-attribute 'default nil :family "DejaVu Sans Mono")
 (set-face-attribute 'mode-line nil :height 80)  ;; (Solo para la barra de modo)
 
 ;; Por defecto el tema oscuro
