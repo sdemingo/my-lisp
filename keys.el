@@ -26,6 +26,9 @@
 ;; Abrir nuevo frame
 (global-set-key (kbd "C-c n")  'make-frame)
 
+;; Remapeo la comb del buffer list por el buffer menu
+(global-set-key "\C-x\C-b" 'buffer-menu)
+
 
 ;; Cambio de tamaño de fuente
 (global-set-key [C-kp-add] 'text-scale-increase-zAp)
