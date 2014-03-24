@@ -8,7 +8,7 @@
 (require 'go-mode-load)
 (setenv "GOROOT" "/opt/go")
 (setenv "GOPATH" "/home/sdemingo/src/go")
-;(setenv "GOBIN" (concat (directory-file-name (getenv "GOROOT")) "/bin"))
+(setenv "GOBIN" (concat (directory-file-name (getenv "GOPATH")) "/bin"))
 
 
 ;; (add-hook 'before-save-hook 'gofmt-before-save)
