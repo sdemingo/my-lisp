@@ -31,9 +31,9 @@
 
 
 ;; Cambio de tamaño de fuente
-(global-set-key [C-kp-add] 'text-scale-increase-zAp)
-(global-set-key [C-kp-subtract] 'text-scale-decrease-zAp)
-(global-set-key [C-kp-multiply] 'text-scale-adjust-zAp)
+;;(global-set-key [C-kp-add] 'text-scale-increase-zAp)
+;;(global-set-key [C-kp-subtract] 'text-scale-decrease-zAp)
+;;(global-set-key [C-kp-multiply] 'text-scale-adjust-zAp)
 ;;(global-set-key [C-kp-subtract] 'text-scale-decrease-zAp)
 ;;(global-set-key [C-kp-add]      'text-scale-increase-zAp)
 
