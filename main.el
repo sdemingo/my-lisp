@@ -20,7 +20,8 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/concurrent-0.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/deferred-0.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/ctable-0.1.1")
-
+(add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/lisp")  ;;lastest orgmode version
+(add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/contrib/lisp" t)
 
 
 ;; Fichero de funciones de personalización
