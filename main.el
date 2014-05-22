@@ -74,8 +74,12 @@
 ;; Fichero de easypg
 (load "~/.emacs.d/my-lisp/easypg-config.el")
 
+;; Fichero de configuración de Markdown mode 
+(load "~/.emacs.d/my-lisp/markdown-mode-config.el")
+
 ;; Htmlize
 (load "~/.emacs.d/modules/htmlize.el")
+
 
 ;; Cl-lib
 ;; (load "~/.emacs.d/modules/cl-lib.el")
