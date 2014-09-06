@@ -108,8 +108,8 @@
 ;; marmalade. Se necesita instalar package.el de la página oficial de
 ;; marmlade
 
-;; (require 'package)
-;; (add-to-list 'package-archives 
-;;    '("marmalade" .
-;;      "http://marmalade-repo.org/packages/"))
-;; (package-initialize)
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  )
