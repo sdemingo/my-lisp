@@ -18,6 +18,7 @@
 (org-clock-persistence-insinuate)
 (setq org-clock-persist t)
 
+(setq org-list-allow-alphabetical t)
 
 
 (custom-set-faces
@@ -60,7 +61,7 @@
 	  ))
 	))
 
-
+(require 'ox-md)
 
 
 (eval-after-load "org-agenda"
