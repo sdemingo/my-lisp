@@ -16,7 +16,7 @@
 
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
-;;(setq org-clock-persist t)
+(setq org-clock-persist nil)
 
 (setq org-list-allow-alphabetical t)
 
@@ -27,6 +27,7 @@
  '(org-date ((t (:foreground "ForestGreen" :weight normal :underline t))) t)
  '(org-level-1 ((t (:foreground "DeepSkyBlue3" :weight bold))) t)
  '(org-level-3 ((t (:foreground "LightBlue2" :weight normal))) t)
+ '(org-document-title ((t (:foreground "pale turquoise" :weight bold :height 2.0))))
  '(org-todo ((t (:foreground "brown2" :weight bold))) t)
  '(org-done ((t (:foreground "green" :weight bold)))))
 
