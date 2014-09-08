@@ -16,7 +16,7 @@
 
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
-(setq org-clock-persist t)
+;;(setq org-clock-persist t)
 
 (setq org-list-allow-alphabetical t)
 
