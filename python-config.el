@@ -26,10 +26,10 @@
 
 
 ;; Autocompletado con jedi
-(autoload 'jedi:setup "jedi" nil t) 
+;(autoload 'jedi:setup "jedi" nil t) 
 
-(require 'jedi)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:server-command (list "python3" jedi:server-script))
-(jedi-mode 1)
-(setq jedi:complete-on-dot t)
+;(require 'jedi)
+;(add-hook 'python-mode-hook 'jedi:setup)
+;(setq jedi:server-command (list "python3" jedi:server-script))
+;(jedi-mode 1)
+;(setq jedi:complete-on-dot t)
