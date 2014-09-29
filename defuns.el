@@ -118,7 +118,7 @@
 
 (setq font-lock-maximum-size nil)
 (require 'font-lock)
-(require 'lazy-lock)
+;(require 'lazy-lock)
 
 
 ;; Barra de exploracion
@@ -136,6 +136,8 @@
 	      (remove-if-not 'buffer-file-name (buffer-list)))))
 
 
+(defun display-startup-echo-area-message ()
+  (message "   ########   Welcome sdemingo. Let the hacking begin!   ########   "))
 
 
 ;;	Configurar la rueda del raton
