@@ -44,15 +44,16 @@
 
 	("a" agenda "Agenda Personal"
 	 ((org-agenda-ndays 28)
-	  (org-agenda-filter-preset '("-astro" "-aula"))
+	  ;(org-agenda-filter-preset '("-astro" "-aula"))
+	  (org-agenda-filter-preset '("-astro"))
 	  ))
 	("c" "Tareas personales para casa" tags-todo "personal|code")
 
 	;; Comandos para el instituto
-	("A" agenda "Agenda de Aula"
-	 ((org-agenda-ndays 14)
-	  (org-agenda-filter-preset '("+aula"))
-	  ))
+	;; ("A" agenda "Agenda de Aula"
+	;;  ((org-agenda-ndays 14)
+	;;   (org-agenda-filter-preset '("+aula"))
+	;;   ))
 	("I" "Tareas del Instituto" tags-todo "ies")
 
 
