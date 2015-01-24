@@ -4,7 +4,7 @@
 ;;
 
 
-(setq syscmd-python-run-command "python3")
+(setq syscmd-python-run-command "python")
 
 
 (defun python-run-file ()
@@ -22,7 +22,7 @@
 			       ))
 
 ;; Redefino el comando python para que me abra la consola de python3 como intérprete
-(setq python-python-command "python3")
+(setq python-python-command "python")
 
 
 ;; Autocompletado con jedi
