@@ -108,7 +108,7 @@
 (defun java-simple-compile ()
   (interactive)
   (if (string-match "\\.java$" (buffer-file-name))
-      (shell-command (concat "javac " (buffer-file-name)))
+      (shell-command (concat "javac " (file-name-nondirectory (buffer-file-name))))
     ))
 
 

@@ -23,6 +23,7 @@
 ;(add-to-list 'load-path "~/.emacs.d/elpa/emmet-mode-20140828.628")
 (add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/lisp")  ;;lastest orgmode version
 (add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/contrib/lisp" t)
+(add-to-list 'load-path "~/.emacs.d/modules/jdee-2.4.1/lisp")
 
 
 ;; Fichero de funciones de personalización
@@ -81,6 +82,10 @@
 
 ;; Htmlize
 (load "~/.emacs.d/modules/htmlize.el")
+
+;; Carga de JDEE (Java para emacs)
+(load "jde")
+
 
 ;; Emmet mode
 ;(load "~/.emacs.d/my-lisp/emmet-config.el")

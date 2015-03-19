@@ -67,8 +67,10 @@
 ;;
 
 (global-set-key (kbd "C-S-j j") 'java-simple-compile-run)
+(global-set-key (kbd "C-S-j c") 'java-simple-compile)
 (global-set-key (kbd "C-S-j d") 'javadoc-lookup)
 (global-set-key (kbd "C-S-j s") 'write-getter-setter-methods)
+(global-set-key (kbd "C-S-j TAB") 'jde-complete-menu)
 
 ;;
 ;;      Macros para Go (C-S-g ...)
