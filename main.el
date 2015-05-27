@@ -20,10 +20,8 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/concurrent-0.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/deferred-0.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/ctable-0.1.1")
-;(add-to-list 'load-path "~/.emacs.d/elpa/emmet-mode-20140828.628")
 (add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/lisp")  ;;lastest orgmode version
 (add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/contrib/lisp" t)
-(add-to-list 'load-path "~/.emacs.d/modules/jdee-2.4.1/lisp")
 
 
 ;; Fichero de funciones de personalización
@@ -83,25 +81,12 @@
 ;; Htmlize
 (load "~/.emacs.d/modules/htmlize.el")
 
-;; Carga de JDEE (Java para emacs)
-(load "jde")
-
-
-;; Emmet mode
-;(load "~/.emacs.d/my-lisp/emmet-config.el")
-
-;; Cl-lib
-;; (load "~/.emacs.d/modules/cl-lib.el")
-
-;; Impatient mode (para verlo en http://localhost:8080/imp/)
-;; (load "~/.emacs.d/modules/impatient-mode/impatient-mode.el")
-
 
 ;; Fichero de carga para la versión portable y de windows
 (if (eq system-type 'windows-nt)
     (load "~/.emacs.d/my-lisp/port-windows.el"))
 
-;; Fichero de w3m (en pruebas. En Windows falla)
+;; Fichero de w3m
 ;; (load "~/.emacs.d/my-lisp/w3m-config.el")
 
 
@@ -120,5 +105,9 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  )
+  ;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+  			   ("melpa" . "http://melpa.milkbox.net/packages/")
+  			   ("marmalade" . "http://marmalade-repo.org/packages/")))
+)
+  
