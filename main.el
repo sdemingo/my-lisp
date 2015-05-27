@@ -13,7 +13,6 @@
 (add-to-list 'load-path "~/.emacs.d/modules/go-mode")
 (add-to-list 'load-path "~/.emacs.d/modules/javadoc-lookup")
 (add-to-list 'load-path "~/.emacs.d/modules/emacs-web-server")
-(add-to-list 'load-path "~/.emacs.d/modules/impatient-mode")
 (add-to-list 'load-path "~/.emacs.d/elpa/")
 (add-to-list 'load-path "~/.emacs.d/elpa/jedi-0.1.2")
 (add-to-list 'load-path "~/.emacs.d/elpa/epc-0.1.1")

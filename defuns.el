@@ -108,6 +108,9 @@
 (column-number-mode 't)
 
 
+;; Ordeno resultado de apropos
+(setq apropos-sort-by-scores t)
+
 ;; Mostrar la ruta del buffer en el título del buffer
 ;; por Bozhidar Batsov
 (setq frame-title-format
