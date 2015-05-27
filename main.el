@@ -81,6 +81,8 @@
 ;; Htmlize
 (load "~/.emacs.d/modules/htmlize.el")
 
+;; Linum-off
+(load "~/.emacs.d/modules/linum-off.el")
 
 ;; Fichero de carga para la versión portable y de windows
 (if (eq system-type 'windows-nt)
