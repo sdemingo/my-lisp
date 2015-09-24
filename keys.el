@@ -45,7 +45,7 @@
 (global-set-key (kbd "<f6>") 'gdb)
 (global-set-key (kbd "<f7>") 'visit-term-buffer)
 (global-set-key (kbd "<f8>") 'ansi-term)
-
+(global-set-key (kbd "<f12>") 'list-bookmarks)
 
 
 ;;
