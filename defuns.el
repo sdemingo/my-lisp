@@ -104,10 +104,11 @@
 ;; Evitar mensaje inicial
 (setq inhibit-startup-message t)
 
-;; Iniciar con el menu de bookmarks
+;; Iniciar con el menu de bookmarks y la agenda
 (require 'bookmark)
 (bookmark-bmenu-list)
 (switch-to-buffer "*Bookmark List*")  ;; iniciar emacs con bookmarks
+(add-hook 'after-init-hook 'org-todo-list)
 
 ;; Mostrar numero de columna en la barra inferior
 (column-number-mode 't)
