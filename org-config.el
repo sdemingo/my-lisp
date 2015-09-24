@@ -20,6 +20,10 @@
 
 (setq org-list-allow-alphabetical t)
 
+(setq-default org-display-custom-times t)
+;(setq org-time-stamp-custom-formats '("<%b %e, %Y>" . "<%b %e, %Y %H:%M>"))
+(setq org-time-stamp-custom-formats '("<%e %b %Y>" . "<%e %b %Y %H:%M>"))
+
 
 (custom-set-faces
  '(org-agenda-date ((t (:foreground "CornflowerBlue" :weight bold))) t)
