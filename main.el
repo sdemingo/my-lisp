@@ -83,6 +83,11 @@
 ;; Linum-off
 (load "~/.emacs.d/modules/linum-off.el")
 
+;; Configuración de bookmarks
+(load "~/.emacs.d/my-lisp/bookmarks-config.el")
+
+
+
 ;; Fichero de carga para la versión portable y de windows
 (if (eq system-type 'windows-nt)
     (load "~/.emacs.d/my-lisp/port-windows.el"))
