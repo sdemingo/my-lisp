@@ -110,6 +110,10 @@
 (switch-to-buffer "*Bookmark List*")  ;; iniciar emacs con bookmarks
 (add-hook 'after-init-hook 'org-todo-list)
 
+
+;; Iniciar maximizado
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Mostrar numero de columna en la barra inferior
 (column-number-mode 't)
 
