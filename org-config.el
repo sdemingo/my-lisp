@@ -21,7 +21,6 @@
 (setq org-list-allow-alphabetical t)
 
 (setq-default org-display-custom-times t)
-;(setq org-time-stamp-custom-formats '("<%b %e, %Y>" . "<%b %e, %Y %H:%M>"))
 (setq org-time-stamp-custom-formats '("<%e %b %Y>" . "<%e %b %Y %H:%M>"))
 
 
@@ -50,7 +49,9 @@
 	 ((org-agenda-ndays 28)
 	  ;(org-agenda-filter-preset '("-astro" "-aula"))
 	  (org-agenda-filter-preset '("-astro"))
-	  ))
+	  )
+	 ("~/Dropbox/agenda.html"))
+
 	("c" "Tareas personales para casa" tags-todo "personal|code")
 
 	;; Comandos para el instituto
@@ -72,6 +73,10 @@
 
 (eval-after-load "org-agenda"
   '(defun org-encode-for-stdout (s) s))
+
+
+;; Al apagar emacs exportamos la agenda
+(add-hook 'kill-emacs-hook 'org-store-agenda-views)
 
 
 ;; Insertar bloques de código en org
