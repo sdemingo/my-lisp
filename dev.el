@@ -62,8 +62,13 @@
 (setq special-display-buffer-names
       `(("*compilation*" . ((name . "*compilation*")
 			    ,@default-frame-alist
+			    (width . 80) 
+			    (height . 40)
 			    (left . (- 1))
 			    (top . 0)))))
+
+
+; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 
 ;;   - Autocerrado de la ventana de compilación
