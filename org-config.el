@@ -52,15 +52,9 @@
 	  )
 	 ("~/Dropbox/agenda.html"))
 
-	("c" "Tareas personales para casa" tags-todo "personal|code")
+	("c" "Tareas personales para casa" tags-todo "personal|code" nil ("~/Dropbox/cosas-pendientes.html"))
 
-	;; Comandos para el instituto
-	;; ("A" agenda "Agenda de Aula"
-	;;  ((org-agenda-ndays 14)
-	;;   (org-agenda-filter-preset '("+aula"))
-	;;   ))
 	("I" "Tareas del Instituto" tags-todo "ies")
-
 
 	("x" agenda "Efemérides astronómicas"
 	 ((org-agenda-ndays 28)
