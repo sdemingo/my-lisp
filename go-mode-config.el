@@ -4,7 +4,6 @@
 ;;
 
 
-
 (require 'go-mode-load)
 (setenv "GOROOT" "/opt/go")
 (setenv "GOPATH" "/home/sdemingo/src/go")
@@ -27,13 +26,11 @@
   (browse-url pk)
 )
 
-
-(defun go-compile ()
-  "Compila go usando el comando go build"
-  (interactive)
-  (if (string-match "\\.go$" (buffer-file-name))
-      (shell-command (concat "go build " (buffer-file-name)))))
-
+(defun my-go-mode-hook ()
+  ; Customize compile command to run go build
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           "go generate && go build -v && go test -v && go vet")))
 
 
 (defun go-run ()
@@ -41,3 +38,8 @@
   (interactive)
   (if (string-match "\\.go$" (buffer-file-name))
       (shell-command (concat "go run " (buffer-file-name)))))
+
+
+; Call Gofmt before saving
+(add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'go-mode-hook 'my-go-mode-hook)
