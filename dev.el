@@ -153,10 +153,6 @@
 ;; Asocio el nxml-mode a fichero gsp (grails)
 (add-to-list 'auto-mode-alist '("\.gsp$" . nxml-mode))
 
-;; Carga de plantillas
-(add-hook 'find-file-hooks 'java-load-skel)
-(add-hook 'find-file-hooks 'python-load-skel)
-(add-hook 'find-file-hooks 'html-load-skel)
 
 ;; Asociamos la función de autocerrado del buffer de compilación
 (setq compilation-finish-functions 'compile-autoclose)

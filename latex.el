@@ -28,7 +28,7 @@
 (add-hook 'latex-mode-hook 'turn-on-auto-fill)
 (add-hook 'latex-mode-hook '(lambda()
 			      (set-fill-column 80)))
-(add-hook 'find-file-hooks 'latex-load-skel)
+
 (add-hook 'latex-mode-hook '(lambda ()
 			      (setq font-lock-keywords-only t)))
 
