@@ -103,6 +103,15 @@
 (global-set-key (kbd "C-S-c d") 'jabber-display-roster)
 
 
+
+;;
+;;      Macros de teclas para el tabbar
+;;
+(global-set-key (kbd "C-<") 'tabbar-backward)
+(global-set-key (kbd "C->") 'tabbar-forward) 
+
+
+
 ;;
 ;;      Macros de teclas para dired
 ;;
@@ -112,24 +121,4 @@
      (define-key dired-mode-map (kbd "C-o") 'dired-open-file-native)
      (global-set-key (kbd "C-c o")  'dired-buffer-file-native)
      ))
-
-
-
-
-
-
-
-;;      Encontrar un contacto en google
-;;      (global-set-key (kbd "<f6>") 'google-contact-info)
-
-;;      Funcion para encontrar makefile (definida arriba)
-;; (global-set-key [f5] (lambda () (interactive)
-;; 		       (compile (format "make -f %s"
-;; 					(get-above-makefile)))))
-
-;;      Funcion para encontrar build.xml (definida arriba)
-;; (global-set-key [f6] (lambda () (interactive)
-;; 		       (compile (format "ant -f %s"
-;; 					(get-above-build)))))
-
 

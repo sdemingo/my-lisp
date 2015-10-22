@@ -19,6 +19,7 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/concurrent-0.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/deferred-0.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/ctable-0.1.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/tabbar-20141109.143")
 (add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/lisp")  ;;lastest orgmode version
 (add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/contrib/lisp" t)
 
@@ -85,6 +86,9 @@
 
 ;; Configuración de bookmarks
 (load "~/.emacs.d/my-lisp/bookmarks-config.el")
+
+;; Configuración de bookmarks
+(load "~/.emacs.d/my-lisp/tabbar-config.el")
 
 
 
