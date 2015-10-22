@@ -36,6 +36,10 @@
 	(scroll-bar-width . 20)
 	))
 
+
+(put 'scroll-left 'disabled nil)
+
+
 ;; Colores
 (defun set-dark-colors ()
   (interactive)
@@ -108,7 +112,7 @@
 (require 'bookmark)
 (bookmark-bmenu-list)
 (switch-to-buffer "*Bookmark List*")  ;; iniciar emacs con bookmarks
-(add-hook 'after-init-hook 'org-todo-list)
+;;(add-hook 'after-init-hook 'org-todo-list)  ;; inciar mostrando la lista de TODO también
 
 
 ;; Iniciar maximizado
