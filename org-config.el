@@ -52,7 +52,9 @@
 	  )
 	 ("~/Dropbox/agenda.html"))
 
-	("c" "Tareas personales para casa" tags-todo "personal|code" nil ("~/Dropbox/cosas-pendientes.html"))
+	("t" "Cosas Pendientes" tags-todo "-recordatorios" nil)
+
+	;("c" "Tareas personales para casa" tags-todo "personal|code" nil ("~/Dropbox/cosas-pendientes.html"))
 
 	("I" "Tareas del Instituto" tags-todo "ies")
 
