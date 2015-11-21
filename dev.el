@@ -73,14 +73,14 @@
 
 ;;   - Autocerrado de la ventana de compilación
 ;;   - http://www.emacswiki.org/emacs/ModeCompile (casi al final de la página)
-(defun compile-autoclose (buffer string)
-  (cond ((string-match "finished" string)
-	 (message "Build maybe successful: closing window.")
-	 (run-with-timer 1 nil
-			 'quit-window
-			 (get-buffer-window buffer t)))
-	(t
-	 (message "Compilation exited abnormally: %s" string))))
+;; (defun compile-autoclose (buffer string)
+;;   (cond ((string-match "finished" string)
+;; 	 (message "Build maybe successful: closing window.")
+;; 	 (run-with-timer 1 nil
+;; 			 'quit-window
+;; 			 (get-buffer-window buffer t)))
+;; 	(t
+;; 	 (message "Compilation exited abnormally: %s" string))))
 
 
 ;; Funciones para generar metodos getter y setter para java
@@ -155,7 +155,7 @@
 
 
 ;; Asociamos la función de autocerrado del buffer de compilación
-(setq compilation-finish-functions 'compile-autoclose)
+;(setq compilation-finish-functions 'compile-autoclose)
 
 
 
