@@ -5,6 +5,10 @@
 
 
 (require 'go-mode-load)
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
+
 (setenv "GOROOT" "/opt/go")
 (setenv "GOPATH" "/home/sdemingo/src/go")
 (setenv "GOBIN" (concat (directory-file-name (getenv "GOPATH")) "/bin"))
