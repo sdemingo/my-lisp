@@ -55,7 +55,7 @@
 (global-set-key (kbd "C-S-s p") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-S-s r") 'recentf-open-files)
 (global-set-key (kbd "C-S-s q") 'kill-other-buffers)
-(global-set-key (kbd "C-S-s v") 'Lorem-ipsum-insert-paragraphs)
+(global-set-key (kbd "C-S-s v") 'lorem-in-buffer)
 (global-set-key (kbd "C-S-s i") 'indent-whole-buffer)
 (global-set-key (kbd "C-S-s t 1") 'set-dark-colors)
 (global-set-key (kbd "C-S-s t 2") 'set-light-colors)

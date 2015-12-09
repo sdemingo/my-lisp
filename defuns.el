@@ -205,6 +205,12 @@
 	  (set-visited-file-name new-name t t)))))))
 
 
+(defun lorem-in-buffer ()
+  (interactive)
+  (with-help-window "*lorem*"
+    (with-current-buffer "*lorem*"
+      (Lorem-ipsum-insert-paragraphs))))
+
 
 ;; Reescalado de tamaño de fuente que evita que los números de línea
 ;; de la izquierda se dejen ver cuando se aumenta el tamaño de texto.
