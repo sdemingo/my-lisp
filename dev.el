@@ -56,6 +56,10 @@
     (compile (format "make -f %s" (get-above-build-file "makefile")))))
 
 
+;; Evita pulsar el intro cada vez que introducimos la tecla de compilar
+(setq compilation-read-command nil)
+
+
 ;; Gestion del buffer de compilación:
 ;;   -  Crea una ventana aparte para el buffer de compilación
 ;;   -  http://stackoverflow.com/questions/745694/how-can-i-make-the-compilation-log-create-a-new-window-in-emacs/746071#746071
