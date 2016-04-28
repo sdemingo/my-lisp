@@ -20,15 +20,16 @@
 
 (setq org-list-allow-alphabetical t)
 
-(setq-default org-display-custom-times t)
-(setq org-time-stamp-custom-formats '("<%e %b %Y>" . "<%e %b %Y %H:%M>"))
+;(setq-default org-display-custom-times t)
+;(setq org-time-stamp-custom-formats '("<%e %b %Y>" . "<%e %b %Y %H:%M>"))
 
 
 (custom-set-faces
  '(org-agenda-date ((t (:foreground "CornflowerBlue" :weight bold))) t)
  '(org-agenda-date-weekend ((t (:foreground "ForestGreen" :weight bold))) t)
  '(org-date ((t (:foreground "ForestGreen" :weight normal :underline t))) t)
- '(org-level-1 ((t (:foreground "DeepSkyBlue3" :weight bold))) t)
+ '(org-level-1 ((t (:foreground "DeepSkyBlue3" :weight bold :height 1.5))) t)
+ '(org-level-2 ((t (:foreground "gold" :height 1.3))) t)
  '(org-level-3 ((t (:foreground "LightBlue2" :weight normal))) t)
  '(org-document-title ((t (:foreground "pale turquoise" :weight bold :height 2.0))))
  '(org-todo ((t (:foreground "brown2" :weight bold))) t)
