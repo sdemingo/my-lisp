@@ -37,10 +37,10 @@
 ;;(global-set-key [C-kp-subtract] 'text-scale-decrease-zAp)
 ;;(global-set-key [C-kp-add]      'text-scale-increase-zAp)
 
+
 ;;
 ;;      Macros para teclas de función
 ;;
-
 (global-set-key (kbd "<f5>") 'compile-ant-or-make)
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key (kbd "<f7>") 'visit-term-buffer)
@@ -51,7 +51,6 @@
 ;;
 ;;      Macros variadas (C-S-s ...)
 ;;
-
 (global-set-key (kbd "C-S-s p") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-S-s r") 'recentf-open-files)
 (global-set-key (kbd "C-S-s q") 'kill-other-buffers)
@@ -61,11 +60,17 @@
 (global-set-key (kbd "C-S-s t 2") 'set-light-colors)
 
 
+;;
+;;      Macros para Orgmode
+;;
+ 
+(global-set-key (kbd "C-S-o s") 'org-insert-src-block)
+
+
 
 ;;
 ;;      Macros para java (C-S-j ...)
 ;;
-
 (global-set-key (kbd "C-S-j j") 'java-simple-compile-run)
 (global-set-key (kbd "C-S-j c") 'java-simple-compile)
 (global-set-key (kbd "C-S-j d") 'javadoc-lookup)
@@ -75,7 +80,6 @@
 ;;
 ;;      Macros para Go (C-S-g ...)
 ;;
-
 (global-set-key (kbd "C-S-g d") 'godoc-lookup)
 (global-set-key (kbd "C-S-g c") 'go-compile)
 (global-set-key (kbd "C-S-g r") 'go-run)
@@ -85,7 +89,6 @@
 ;;
 ;;      Macros de latex (C-S-l ...)
 ;;
-
 (global-set-key (kbd "C-S-l l") 'latex-compile)
 (global-set-key (kbd "C-S-l v") 'latex-preview)
 (global-set-key (kbd "C-S-l c") 'latex-word-count)
