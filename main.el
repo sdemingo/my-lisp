@@ -90,6 +90,9 @@
 ;; Configuración de bookmarks
 (load "~/.emacs.d/my-lisp/tabbar-config.el")
 
+;; Configuración de undo tree
+(load "~/.emacs.d/my-lisp/undo-tree-config.el")
+
 
 
 ;; Fichero de carga para la versión portable y de windows

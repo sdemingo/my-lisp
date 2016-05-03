@@ -74,11 +74,6 @@
 ;; Números de línea en la parte izquierda
 (global-linum-mode t)
 
-;; Activo undo-tree
-(require 'undo-tree)
-(global-undo-tree-mode)
-
-
 ;; copy and paste by classical way
 ;; (cua-mode t)
 ;; (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
