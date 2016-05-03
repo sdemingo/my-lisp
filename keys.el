@@ -30,28 +30,20 @@
 (global-set-key "\C-x\C-b" 'buffer-menu)
 
 
-;; Cambio de tamaño de fuente
-;;(global-set-key [C-kp-add] 'text-scale-increase-zAp)
-;;(global-set-key [C-kp-subtract] 'text-scale-decrease-zAp)
-;;(global-set-key [C-kp-multiply] 'text-scale-adjust-zAp)
-;;(global-set-key [C-kp-subtract] 'text-scale-decrease-zAp)
-;;(global-set-key [C-kp-add]      'text-scale-increase-zAp)
-
-
 ;;
 ;;      Macros para teclas de función
 ;;
 (global-set-key (kbd "<f5>") 'compile-ant-or-make)
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key (kbd "<f7>") 'visit-term-buffer)
-(global-set-key (kbd "<f8>") 'ansi-term)
+(global-set-key (kbd "<f8>") 'sr-speedbar-toggle)
 (global-set-key (kbd "<f12>") 'list-bookmarks)
 
 
 ;;
 ;;      Macros variadas (C-S-s ...)
 ;;
-(global-set-key (kbd "C-S-s p") 'sr-speedbar-toggle)
+;(global-set-key (kbd "C-S-s p") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-S-s r") 'recentf-open-files)
 (global-set-key (kbd "C-S-s q") 'kill-other-buffers)
 (global-set-key (kbd "C-S-s v") 'lorem-in-buffer)
