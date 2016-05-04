@@ -74,12 +74,6 @@
 ;; Números de línea en la parte izquierda
 (global-linum-mode t)
 
-;; copy and paste by classical way
-;; (cua-mode t)
-;; (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-;; (transient-mark-mode 1) ;; No region when it is not highlighted
-;; (setq cua-keep-region-after-copy t)
-
 
 ;; Configuro resaltado de línea
 (global-hl-line-mode 1)
@@ -134,12 +128,14 @@
 
 (setq font-lock-maximum-size nil)
 (require 'font-lock)
-;(require 'lazy-lock)
 
 
 ;; Barra de exploracion
 (require 'speedbar)	;; barra antigua
 (require 'sr-speedbar)	;; barra en la misma ventana
+(setq speedbar-show-unknown-files t) ; mostrar todos los ficheros
+(setq speedbar-use-images nil) ; sin iconos, solo texto
+;(setq sr-speedbar-right-side nil) ; en el lado izquierdo
 
 
 ;; Mata todos los demás buffers menos el activo
