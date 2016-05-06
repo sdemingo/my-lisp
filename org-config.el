@@ -96,6 +96,11 @@
     (org-edit-src-code)))
 
 
+;; ditaa
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t))) ; this line activates ditaa
+
 
 ;; keybindings solo para el modo
 (add-hook 'org-mode-hook '(lambda ()
