@@ -13,10 +13,17 @@
 
 (defun latex-load-skel ()
   (interactive)
-  (when (and
+
+  (if (and
 	 (string-match "\\.tex$" (buffer-file-name))
 	 (eq 1 (point-max)))
-    (insert-file "~/.emacs.d/skels/skel-latex.tex")))
+
+      (if (and
+	 (string-match "\\-paper.tex$" (buffer-file-name))
+	 (eq 1 (point-max)))
+	  (insert-file "~/.emacs.d/skels/skel-latex-paper.tex")
+
+	(insert-file "~/.emacs.d/skels/skel-latex.tex"))))
 
 
 (defun python-load-skel ()
