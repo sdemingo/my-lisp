@@ -51,7 +51,8 @@
 	  ;(org-agenda-filter-preset '("-astro" "-aula"))
 	  (org-agenda-filter-preset '("-astro"))
 	  )
-	 ("~/Dropbox/agenda.html"))
+	 ;("~/Dropbox/agenda.html")
+	 )
 
 	("t" "Cosas Pendientes" tags-todo "-recordatorios" nil)
 
