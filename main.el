@@ -111,6 +111,10 @@
 )
 
 
+;; (load (expand-file-name "~/.quicklisp/slime-helper.el"))
+;; (setq inferior-lisp-program "sbcl")
+
+
 ;; Configuración para instalar paquetes directamente desde
 ;; marmalade. Se necesita instalar package.el de la página oficial de
 ;; marmlade

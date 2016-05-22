@@ -37,6 +37,7 @@
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key (kbd "<f7>") 'visit-term-buffer)
 (global-set-key (kbd "<f8>") 'sr-speedbar-toggle)
+(global-set-key (kbd "<f11>") 'org-tags-view)
 (global-set-key (kbd "<f12>") 'list-bookmarks)
 
 
