@@ -199,3 +199,60 @@
 ;; 		    (loop as d = default-directory then (expand-file-name ".." d)
 ;; 			  if (file-exists-p (expand-file-name "build.xml" d))
 ;; 			  return d)))
+
+
+
+;; 
+;; Reemplaza <,> y & por sus HTML entities. Código escrito por Xah Lee
+;; en http://ergoemacs.org/emacs/elisp_replace_html_entities_command.html
+;;
+(defun html-replace-html-chars-to-entities (*begin *end &optional *entity-to-char-p)
+  "Replace HTML chars & < > to HTML entities on current line or selection.
+The string replaced are:
+ & ⇒ &amp;
+ < ⇒ &lt;
+ > ⇒ &gt;
+
+Print to message buffer occurrences of replacement (if any), with position.
+If `universal-argument' is called, the replacement direction is reversed.
+When called in lisp code, *begin *end are region begin/end positions. If entity-to-char-p is true, change entities to chars instead.
+See also: `xah-html-replace-html-named-entities', `xah-html-replace-html-chars-to-unicode'
+URL `http://ergoemacs.org/emacs/elisp_replace_html_entities_command.html'
+Version 2016-09-02"
+  (interactive
+   (list
+    ;; These are done separately here
+    ;; so that command-history will record these expressions
+    ;; rather than the values they had this time.
+    ;; 2016-07-06 note, if you add a else, it won't work
+    (if (use-region-p) (region-beginning))
+    (if (use-region-p) (region-end))
+    (if current-prefix-arg t nil)))
+
+  (if (null *begin) (setq *begin (line-beginning-position)))
+  (if (null *end) (setq *end (line-end-position)))
+
+  (let ((-changedItems '())
+        (-findReplaceMap
+         (if *entity-to-char-p
+             ;; this to prevent creating a replacement sequence out of blue
+             [
+              ["&amp;" "&"] ["&lt;" "<"] ["&gt;" ">"]
+              ["&" "&"] ["<" "<"] [">" ">"]
+              ]
+           [ ["&" "&amp;"] ["<" "&lt;"] [">" "&gt;"] ]
+           )))
+    (save-excursion
+      (save-restriction
+        (narrow-to-region *begin *end)
+        (let ( (case-fold-search nil))
+          (mapc
+           (lambda (-x)
+             (goto-char (point-min))
+             (while (search-forward (elt -x 0) nil t)
+               (push (format "%s %s" (point) -x) -changedItems)
+               (replace-match (elt -x 1) "FIXEDCASE" "LITERAL")))
+           -findReplaceMap))))
+    (mapcar
+     (lambda (-x) (princ -x) (terpri))
+     (reverse -changedItems))))

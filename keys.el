@@ -51,6 +51,7 @@
 (global-set-key (kbd "C-S-s i") 'indent-whole-buffer)
 (global-set-key (kbd "C-S-s t 1") 'set-dark-colors)
 (global-set-key (kbd "C-S-s t 2") 'set-light-colors)
+(global-set-key (kbd "C-S-s b") 'bookmark-save-orgmode)
 
 
 ;;

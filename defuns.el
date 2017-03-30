@@ -83,12 +83,14 @@
 
 
 ;; Uso de UTF-8 por defecto
-
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+
+;; Para que funcionen los acentos bien
+(require 'iso-transl)
 
 ;; Resaltado linea actual
 '(global-hl-line-mode t nil (hl-line))
@@ -150,6 +152,16 @@
 
 (defun display-startup-echo-area-message ()
   (message "   ########   Welcome sdemingo. Let the hacking begin!   ########   "))
+
+
+;; Deshace el wrapeo de lineas y coloca cada parrafo en una
+;; única linea
+(defun refill-paragraphs-to-be-one-line ()
+  "fill individual paragraphs with large fill column"
+  (interactive)
+  (let ((fill-column 100000))
+    (fill-individual-paragraphs (point-min) (point-max))))
+
 
 
 ;;	Configurar la rueda del raton
