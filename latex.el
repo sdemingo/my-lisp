@@ -52,14 +52,9 @@
 
 ;; (No funciona con del en windows por los slash de la ruta)
 (defun latex-remove-tmp-files()
-  "Limpia ficheros temporales creados por la compilación de latex
-  y guardados en la lista latex-tmp-files-list"
+  "Limpia ficheros temporales creados ejecutando syscmd-latex-remove-tmp-files"
   (interactive)
-  (let ((list latex-tmp-files-list))
-    (while list
-      (setq ext (car list))
-      (dired-delete-file (concat (file-name-sans-extension buffer-file-name) ext))
-      (setq list (cdr list)))))
+  (shell-command syscmd-latex-remove-tmp-files))
 
 
 (defun latex-word-count ()

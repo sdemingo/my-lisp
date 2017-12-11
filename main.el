@@ -7,22 +7,22 @@
 
 
 ;;      Configuro mi directorio de paquetes
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/modules/")
-(add-to-list 'load-path "~/.emacs.d/modules/auto-complete")
-(add-to-list 'load-path "~/.emacs.d/modules/go-mode")
-(add-to-list 'load-path "~/.emacs.d/modules/javadoc-lookup")
-(add-to-list 'load-path "~/.emacs.d/modules/emacs-web-server")
-(add-to-list 'load-path "~/.emacs.d/elpa/")
-(add-to-list 'load-path "~/.emacs.d/elpa/jedi-0.1.2")
-(add-to-list 'load-path "~/.emacs.d/elpa/epc-0.1.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/concurrent-0.3.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/deferred-0.3.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/ctable-0.1.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/tabbar-20141109.143")
-(add-to-list 'load-path "~/.emacs.d/elpa/undo-tree-20140509.522")
-(add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/lisp")  ;;lastest orgmode version
-(add-to-list 'load-path "~/.emacs.d/modules/org-8.2.6/contrib/lisp" t)
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/")
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/go-mode")
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/javadoc-lookup")
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/emacs-web-server")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/jedi-0.1.2")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/epc-0.1.1")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/concurrent-0.3.1")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/deferred-0.3.1")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/ctable-0.1.1")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/tabbar-20141109.143")
+(add-to-list 'load-path "~/.emacs.d/lisp/elpa/undo-tree-20140509.522")
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/org-8.2.6/lisp")  ;;lastest orgmode version
+(add-to-list 'load-path "~/.emacs.d/lisp/modules/org-8.2.6/contrib/lisp" t)
 
 ;; Fichero de funciones de personalización
 (load "~/.emacs.d/my-lisp/defuns.el")
@@ -40,7 +40,7 @@
 (load "~/.emacs.d/my-lisp/latex.el")
 
 ;; Fichero de configuración de slime y lisp
-;; (load "~/.emacs.d/modules/slime-lisp.el")
+;; (load "~/.emacs.d/lisp/modules/slime-lisp.el")
 
 ;; Fichero de configuración de ispell
 (load "~/.emacs.d/my-lisp/ispell-config.el")
@@ -55,10 +55,10 @@
 (load "~/.emacs.d/my-lisp/auto-complete-init.el")
 
 ;; Búsqueda de info en javadoc
-(load "~/.emacs.d/modules/javadoc-lookup/javadoc-lookup.el")
+(load "~/.emacs.d/lisp/modules/javadoc-lookup/javadoc-lookup.el")
 
 ;; Módulo lorem-ipsum
-(load "~/.emacs.d/modules/lorem-ipsum.el")
+(load "~/.emacs.d/lisp/modules/lorem-ipsum.el")
 
 ;; Fichero de configuración del modulo de GO
 (load "~/.emacs.d/my-lisp/go-mode-config.el")
@@ -79,10 +79,10 @@
 (load "~/.emacs.d/my-lisp/markdown-mode-config.el")
 
 ;; Htmlize
-(load "~/.emacs.d/modules/htmlize.el")
+(load "~/.emacs.d/lisp/modules/htmlize.el")
 
 ;; Linum-off
-(load "~/.emacs.d/modules/linum-off.el")
+(load "~/.emacs.d/lisp/modules/linum-off.el")
 
 ;; Configuración de bookmarks
 (load "~/.emacs.d/my-lisp/bookmarks-config.el")

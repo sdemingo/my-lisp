@@ -206,6 +206,55 @@
 ;; Reemplaza <,> y & por sus HTML entities. Código escrito por Xah Lee
 ;; en http://ergoemacs.org/emacs/elisp_replace_html_entities_command.html
 ;;
+(defun html-replace-html-entities-to-chars (*begin *end &optional *entity-to-char-p)
+  "Replace HTML chars & < > to HTML entities on current line or selection.
+The string replaced are:
+ & ⇒ &amp;
+ < ⇒ &lt;
+ > ⇒ &gt;
+
+(justo lo contrario)"
+  (interactive
+   (list
+    (if (use-region-p) (region-beginning))
+    (if (use-region-p) (region-end))
+    (if current-prefix-arg t nil)))
+
+  (if (null *begin) (setq *begin (line-beginning-position)))
+  (if (null *end) (setq *end (line-end-position)))
+
+  (let ((-changedItems '())
+        (-findReplaceMap
+         (if *entity-to-char-p
+             ;; this to prevent creating a replacement sequence out of blue
+             [
+              ["&" "&amp;"] ["<" "&lt;"] [">" "&gt;"]
+              ["&" "&"] ["<" "<"] [">" ">"]
+              ]
+           [ ["&amp;" "&"] ["&lt;" "<"] ["&gt;" ">"] ]
+           )))
+    (save-excursion
+      (save-restriction
+        (narrow-to-region *begin *end)
+        (let ( (case-fold-search nil))
+          (mapc
+           (lambda (-x)
+             (goto-char (point-min))
+             (while (search-forward (elt -x 0) nil t)
+               (push (format "%s %s" (point) -x) -changedItems)
+               (replace-match (elt -x 1) "FIXEDCASE" "LITERAL")))
+           -findReplaceMap))))
+    (mapcar
+     (lambda (-x) (princ -x) (terpri))
+     (reverse -changedItems))))
+
+
+
+
+;; 
+;; Reemplaza <,> y & por sus HTML entities. Código escrito por Xah Lee
+;; en http://ergoemacs.org/emacs/elisp_replace_html_entities_command.html
+;;
 (defun html-replace-html-chars-to-entities (*begin *end &optional *entity-to-char-p)
   "Replace HTML chars & < > to HTML entities on current line or selection.
 The string replaced are:

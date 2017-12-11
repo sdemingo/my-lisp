@@ -20,8 +20,6 @@
 
 (setq org-list-allow-alphabetical t)
 
-;(setq-default org-display-custom-times t)
-;(setq org-time-stamp-custom-formats '("<%e %b %Y>" . "<%e %b %Y %H:%M>"))
 
 
 (custom-set-faces
@@ -54,8 +52,7 @@
 	 ;("~/Dropbox/agenda.html")
 	 )
 
-	("t" "Cosas Pendientes" tags-todo "-recordatorios" nil)
-
+	;; ("t" "Cosas Pendientes" tags-todo "-recordatorios" nil)
 	;; ("c" "Tareas personales para casa" tags-todo "personal|code" nil ("~/Dropbox/cosas-pendientes.html"))
 
 	("I" "Tareas del Instituto" tags-todo "ies")

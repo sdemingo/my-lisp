@@ -7,6 +7,7 @@
 
 ;; Comandos de sistema
 (setq syscmd-latex-compile "pdflatex")
+(setq syscmd-latex-remove-tmp-files "latexmk -c")
 (setq syscmd-latex-preview "evince")
 (setq syscmd-file-open "xdg-open")
 (setenv "PYTHONPATH" "/usr/local/lib/python2.7/dist-packages:/home/sdemingo/.emacs.d/elpa/jedi-0.1.2")
@@ -133,10 +134,10 @@
 
 
 ;; Barra de exploracion
-(require 'speedbar)	;; barra antigua
-(require 'sr-speedbar)	;; barra en la misma ventana
-(setq speedbar-show-unknown-files t) ; mostrar todos los ficheros
-(setq speedbar-use-images nil) ; sin iconos, solo texto
+;;(require 'speedbar)	;; barra antigua
+;;(require 'sr-speedbar)	;; barra en la misma ventana
+;;(setq speedbar-show-unknown-files t) ; mostrar todos los ficheros
+;;(setq speedbar-use-images nil) ; sin iconos, solo texto
 ;(setq sr-speedbar-right-side nil) ; en el lado izquierdo
 
 
